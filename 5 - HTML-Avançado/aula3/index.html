@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <form action="salvar.html" method="GET">
+      <!--Label fica fora do campo.-->
+      <label for="nome">Nome:</label>
+      <input id="nome" name=nome type="text" placeholder="Digite o seu nome">
+      
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="Digite o seu email">
+      
+      <br></br>
+
+      <label for="senha">Senha:</label>
+      <input id="senha" name="senha" type="password" placeholder="Digite a sua senha">
+      
+      <br></br>
+
+      <label>Selecione a cor do seu nome</label>
+      <input type="color">
+
+      <br><br>
+      
+      <label>Sexo:</label>
+      <br>
+      <input name="sexo" type="radio" value="masculino" id="masculino"> <label for="masculino">Masculino</label>
+      <br>
+      <input name="sexo" type="radio" value="feminino" id="feminino"> <label for="feminino">Feminino</label>
+      <br>
+      <input name="sexo" type="radio" value="nao definido" id="nao definido"> <label for="nao definido">Prefiro não informar</label>
+      <br><br>
+
+      <label>Habilidades:</label>
+      <br>
+      <input name="habilidades" type="checkbox" value="html" id="html"> <label for="html">HTML</label>
+      <br>
+      <input name="habilidades" type="checkbox" value="css" id="css"> <label for="css">CSS</label>
+      <br>
+      <input name="habilidades" type="checkbox" value="javascript" id="javascript"> <label for="javascript">Javascript</label>
+      <!--um mesmo conjunto de informações, deve ter um mesmo "name"-->
+      <br><br>
+
+      <button>Enviar</button>
+    </form>
+    <!--label também é uma tag semântica. Além disso,
+    é do tipo inline.-->
+    <!--o get utiliza o método http envia os dados na url
+    o que torna o processo um pouco mais inseguro. Nesse caso,
+    o "POST" é mais adequado, o post depende do back-end para processar os dados-->
+
+  </body>
+</html>

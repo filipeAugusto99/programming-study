@@ -1,0 +1,26 @@
+
+p {
+  font-size: 40px;
+  color: green;
+  text-align: justify;
+  font-weight: bold;
+  font-style: italic;
+  /*font-variant: small-caps;*/
+  text-transform: uppercase;
+  text-indent: 50px;
+  word-spacing: 20px;
+  line-height: 50px;
+}
+/*"justify" o texto fica simétrico*/
+/*"line-height" = espaçamento de uma linha para outra. */
+a {
+  text-decoration: overline;
+  letter-spacing: 20px;
+  /*text-decoration: none = retira o anderline*/
+  /*text-decoration: line-through = uma linha no meio*/
+}
+
+h1 {
+  text-shadow: 2px 3px 5px blue;
+  /*adiciona sombra em textos, tem a mesma função do box-shadow */
+}
