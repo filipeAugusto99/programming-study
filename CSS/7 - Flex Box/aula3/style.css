@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  background: silver;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 600px;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  /*align-items alinha na horizontal e align-content alinha os itens na vertical*/
+}
+
+.caixa {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
