@@ -1,0 +1,14 @@
+body{  
+    background: red;
+}
+
+h3{
+    color: green;
+}
+.foto-principal{
+    width: 350px;
+}
+
+#titulo-principal{
+    color: yellow;
+}

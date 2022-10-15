@@ -1,0 +1,20 @@
+body{  
+    background: #ff0000;
+}
+
+p {
+    color: rgb(34, 34, 34);
+}
+
+h3 {
+    color: green;
+}
+
+.photo-principal {
+    width:500px;
+}
+
+#titulo-principal {
+    color: yellow;
+}
+/*o "id" é mais utilizado em operações que utilizem javascript. */

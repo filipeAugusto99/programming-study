@@ -1,0 +1,20 @@
+body{  
+    background: #dfdfdf;
+}
+ 
+p {
+    color: rgb(34, 34, 34);
+}
+
+.foto-principal {
+    width: 350px;
+    border: 2px solid #ffffff; /* nome da estrutura = "shorthand"*/
+    border-radius: 0 100% 0 100%; /* deixa a borda um pouco mais redonda */
+}
+/* o "border" simplifica os comandos.
+o caso acima é o mesmo que:
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+obs! a ordem é importante!*/
+   
