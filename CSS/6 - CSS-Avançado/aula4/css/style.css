@@ -1,0 +1,23 @@
+:root {
+  font-size: 50px;
+}
+
+body {
+  font-size: 12px;
+}
+
+.box {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/*1 em equivale a 15px. Faz mais sentidos para a utilização de fontes.*/
+/*é interessante para trabalharmos com responsividade. Além disso, em é relativo
+ao elemento pai. */
+
+/*rem é relativo ao root*/

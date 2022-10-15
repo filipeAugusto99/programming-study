@@ -1,0 +1,10 @@
+/*"blur" = borrão*, funciona para classes e imagens*/
+/*"brightness" = brilho */
+img {
+  filter: brightness(5%)
+}
+
+/* 
+.box {
+  filter: blur(100px);
+} */

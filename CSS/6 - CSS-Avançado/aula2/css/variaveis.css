@@ -1,0 +1,6 @@
+:root {
+  --color-primary: rgb(160, 32, 32);
+  --color-secundary: rgb(106, 0, 255);
+  
+  --spacing:16px;
+}
