@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.styleAtores ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  list-style: none;
+
+}
+
+.styleAtores ul li {
+  display: block;
+  background-color: rgb(219, 217, 217);
+  padding: 30px 15px 30px 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+
+}
