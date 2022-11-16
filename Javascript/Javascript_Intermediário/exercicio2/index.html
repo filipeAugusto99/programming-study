@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      border: none;
+      font-size: 2rem;
+    }
+
+    input:disabled {
+      background-color: white;
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 7px 15px 7px 15px;
+    }
+
+    #botaoIncrement.cor {
+      background-color: green;
+      border: 3px solid black;
+      border-radius: 5px;
+    }
+
+    #botaoDecrement.cor2 {
+      background-color: red;
+      border: 3px solid black;
+      border-radius: 5px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="position">
+    <input type="text" value="0" disabled id="counterValue"> <br>
+    <button id="botaoDecrement">-</button>
+    <button id="botaoIncrement">+</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
