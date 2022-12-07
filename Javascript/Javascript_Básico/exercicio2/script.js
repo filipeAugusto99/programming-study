@@ -1,15 +1,15 @@
 
-let nome = prompt('Digite o seu nome:');
-let inputIdade = prompt('Digite a sua idade:')
+let name = prompt('Digite o seu nome:');
+let inputAge = prompt('Digite a sua idade:')
 
-let idade = parseInt(inputIdade)
+let age = parseInt(inputAge)
 
-if (idade >= 18 && nome === 'Thomas Anderson' || idade >= 18 && nome === 'thomas anderson') {
-  document.write(`Olá ${nome}, você é maior de idade! HOOW! Você é um personagem do filme The Matrix!!`)
-} else if (idade >= 18) {
-  document.write(`Olá ${nome}, você é maior de idade!`)
+if (age >= 18 && name === 'Thomas Anderson' || age >= 18 && name === 'thomas anderson') {
+  document.write(`Olá ${name}, você é maior de idade! HOOW! Você é um personagem do filme The Matrix!!`)
+} else if (age >= 18) {
+  document.write(`Olá ${name}, você é maior de idade!`)
 } else {
-  document.write(`Olá ${nome}, você é menor de idade!`)
+  document.write(`Olá ${name}, você é menor de idade!`)
 }
 
 

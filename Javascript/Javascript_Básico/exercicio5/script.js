@@ -1,15 +1,13 @@
 
-function tabuada() {
-  let inputNumero = prompt("Digite um número");
-  let numero = parseInt(inputNumero);
+  let inputNumber = prompt("Digite um número");
+  let number = parseInt(inputNumber);
 
-  let resultado = '';
+  let result = '';
 
   for (let i = 1; i <= 10; i++) {
-    resultado = numero * i;
-    document.write(numero + 'x' + i + '=' + resultado + '<br>');
+    result = number * i;
+    document.write(number + 'x' + i + '=' + result + '<br>');
   }
-}
 
 
 

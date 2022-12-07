@@ -1,33 +1,35 @@
 
-let listaAtores = [
+let actors = document.querySelector('#atores')
+
+let listActors = [
   {
-    nome: 'Keanu Reaves',
-    personagem: 'Neo',
-    filme: 'The Matrix',
+    name: 'Keanu Reaves',
+    character: 'Neo',
+    movie: 'The Matrix',
   },
   {
-    nome: 'David Prowse',
-    personagem: 'Darth Vader',
-    filme: 'Star Wars Episódios IV-VI',
+    name: 'David Prowse',
+    character: 'Darth Vader',
+    movie: 'Star Wars Episódios IV-VI',
   },
   {
-    nome: 'Bruce Wayne',
-    personagem: 'Batman',
-    filme: 'Batman - O Inicio',
+    name: 'Bruce Wayne',
+    character: 'Batman',
+    movie: 'Batman - O Inicio',
   },
 ]
 
-let htmlAtores = '';
+let htmlAtors = '';
 
-for (let item of listaAtores) {
+for (let item of listActors) {
 
-  htmlAtores += `
+  htmlAtors += `
   <li>
-    <h1>${item.nome}</h1><br>
-    Interpreta o personagem ${item.personagem}
-    no filme ${item.filme} <br>
+    <h1>${item.name}:</h1><br>
+    Interpreta o personagem ${item.character}
+    no filme ${item.movie} <br>
   </li>
   `
 }
 
-document.querySelector('#atores').innerHTML = htmlAtores;
+actors.innerHTML = htmlAtors
