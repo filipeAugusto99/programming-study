@@ -1,11 +1,14 @@
+let h1 = document.querySelector('#h1')
 
-let name = prompt('Digite o seu nome:');
-let inputAge = prompt('Digite a sua idade:')
+let name = prompt('Informe o seu nome:')
+let inputAge = prompt('Informe a sua idade:')
 
 let age = parseInt(inputAge)
 
-if (age >= 18) {
-  document.write(`Olá ${name}, você é maior de idade!`)
-} else {
-  document.write(`Olá ${name}, você é menor de idade!`)
+const biggerAge = 18;
+
+if(age < biggerAge) {
+  h1.innerHTML = `Olá ${name} , você é menor de idade`
+} else if(age >= biggerAge) {
+  h1.innerHTML = `Olá ${name}, você é maior de idade`
 }
