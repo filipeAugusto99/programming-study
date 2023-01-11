@@ -1,25 +1,20 @@
-
+let button = document.querySelector("#button")
 let h1 = document.querySelector("#h1")
 
-let button = document.getElementById("button").addEventListener("click", clickEvent)
-
-function clickEvent() {
-
-  let name = prompt('Digite o seu nome:');
-  let inputAge = prompt('Digite a sua idade:')
-
+button.onclick = function nameAndAge() {
+  let name = prompt("Informe o seu nome:")
+  let inputAge = prompt("Informe a sua idade:")
   let age = parseInt(inputAge)
+  
+  const biggerAge = 18;
 
-  if (age >= 18 && name === 'Thomas Anderson' || age >= 18 && name === 'thomas anderson') {
-    h1.innerHTML = (`<h1>Olá ${name}, você é maior de idade!</h1><h2>HOOW! Você é um personagem do filme The Matrix!!</h2>`)
-  } else if (age >= 18) {
-    h1.innerHTML = (`Olá ${name}, você é maior de idade!`)
+  if(age >= biggerAge && name === "Thomas Anderson") {
+    h1.innerHTML = `Olá ${name}, você é maior de idade e interpreta o Neo no filme The Matrix!`
+  } else if (age >= biggerAge && name === "thomas anderson"){
+    h1.innerHTML = `Olá ${name}, você é maior de idade e interpreta o Neo no filme The Matrix!`
+  } else if (age >= biggerAge) {
+    h1.innerHTML = `Olá ${name}, você é maior de idade!`
   } else {
-    h1.innerHTML = (`Olá ${name}, você é menor de idade!`)
+    h1.innerHTML = `Olá ${name}, você é menor de idade!`
   }
 }
-
-
-
-
-
