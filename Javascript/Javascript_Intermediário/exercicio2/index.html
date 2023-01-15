@@ -4,45 +4,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>Exercise 01</title>
   <style>
-    input {
-      border: none;
-      font-size: 2rem;
+    .buttons {
+      display: flex;
+      align-items: center;
     }
 
-    input:disabled {
-      background-color: white;
-    }
-
-    button {
+    .buttons .decrement {
+      margin-right: 5px;
+      padding: 10px 15px;
       cursor: pointer;
-      font-size: 20px;
-      padding: 7px 15px 7px 15px;
     }
 
-    #botaoIncrement.cor {
-      background-color: green;
-      border: 3px solid black;
-      border-radius: 5px;
-    }
-
-    #botaoDecrement.cor2 {
+    .buttons .decrement.disable {
       background-color: red;
-      border: 3px solid black;
-      border-radius: 5px;
+      border-radius: 8px;
     }
 
-  </style>
+    .buttons .increment {
+      cursor: pointer;
+      margin-right: 5px;
+      padding: 10px 15px;
+    }
 
+    .buttons .increment.active{
+      border-radius: 8px;
+      background-color: green;
+    }
+
+    .value {
+      font-size: 2em;
+    }
+
+    .stop {
+      margin-top: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .stop.color-stop {
+      border-radius: 8px;
+      background-color: rgb(80, 69, 227);
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <div class="position">
-    <input type="text" value="0" disabled id="counterValue"> <br>
-    <button id="botaoDecrement">-</button>
-    <button id="botaoIncrement">+</button>
+  <div class="value">0</div>
+  <div class="buttons">
+    <button class="decrement">-</button>
+    <button class="increment">+</button>
   </div>
+  <button class="stop">STOP</button>
   <script src="script.js"></script>
 </body>
 </html>

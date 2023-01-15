@@ -1,37 +1,36 @@
+const increment = document.querySelector(".increment")
+const decrement = document.querySelector(".decrement")
+const stop = document.querySelector(".stop")
 
-const botaoIncrement = document.querySelector('#botaoIncrement');
-const botaoDecrement = document.querySelector('#botaoDecrement');
-const counter = document.querySelector('#counterValue');
+let value = document.querySelector(".value")
+let count = 0;
+let interval = 0;
 
-let contador = 0;
-let intervalo1 = null;
-let intervalo2 = null;
-
-function somando() {
-  botaoDecrement.classList.remove('cor2');
-  botaoIncrement.classList.add('cor');
-  
-  intervalo1 = setInterval(function(){
-  contador ++;
-  counter.value = contador;
+decrement.addEventListener("click", function() {
+  clearInterval(interval)
+  stop.classList.remove("color-stop")
+  increment.classList.remove('active')
+  decrement.classList.add('disable')
+  interval = setInterval(() => {
+    count --
+    value.innerText = count
   }, 100)
-  
-  clearInterval(intervalo2)
-  
-}
+})
 
-
-function subtraindo() {
-  botaoIncrement.classList.remove('cor');
-  botaoDecrement.classList.add('cor2');
-
-  intervalo2 = setInterval(function(){
-  contador --;
-  counter.value = contador;
+increment.addEventListener("click", function() {
+    clearInterval(interval)
+    stop.classList.remove("color-stop")
+    decrement.classList.remove('disable')
+    increment.classList.add('active')
+    interval = setInterval(() => {
+    count ++
+    value.innerText = count
   }, 100)
-  clearInterval(intervalo1)
-}
+})
 
-botaoIncrement.addEventListener('click', somando);
-
-botaoDecrement.addEventListener('click', subtraindo);
+stop.addEventListener("click", function() {
+  clearInterval(interval)
+  decrement.classList.remove('disable')
+  increment.classList.remove('active')
+  stop.classList.add("color-stop")
+})
