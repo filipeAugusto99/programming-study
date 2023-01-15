@@ -1,35 +1,35 @@
-
-let actors = document.querySelector('#atores')
+const actors = document.querySelector('.ul')
 
 let listActors = [
   {
-    name: 'Keanu Reaves',
-    character: 'Neo',
-    movie: 'The Matrix',
+    name: 'Keanu Reeves',
+    personagem: 'Neo',
+    filme: 'The Matrix',
   },
   {
-    name: 'David Prowse',
-    character: 'Darth Vader',
-    movie: 'Star Wars Episódios IV-VI',
+    name: 'Hayden Christensen',
+    personagem: 'Anakin Skywalker',
+    filme: 'Star Wars',
   },
   {
-    name: 'Bruce Wayne',
-    character: 'Batman',
-    movie: 'Batman - O Inicio',
-  },
+    name: 'Tobey Maguire',
+    personagem: 'Spider-Man',
+    filme: 'Spider-Man',
+  }
 ]
 
-let htmlAtors = '';
+let htmlActors = ""
 
-for (let item of listActors) {
-
-  htmlAtors += `
-  <li>
-    <h1>${item.name}:</h1><br>
-    Interpreta o personagem ${item.character}
-    no filme ${item.movie} <br>
-  </li>
-  `
+for (let i = 0; i < listActors.length - 2; i++) {
+  listActors.forEach((actors) => {
+    htmlActors += `
+      <li>
+        <h1>${actors.name}</h1>
+        <p>Interpreta o personagem ${actors.personagem} no filme ${actors.filme}</p>
+      </li>
+      `
+  })
 }
 
-actors.innerHTML = htmlAtors
+console.log(htmlActors)
+actors.innerHTML = htmlActors;

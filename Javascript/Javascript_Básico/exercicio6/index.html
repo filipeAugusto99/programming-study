@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    .ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .ul li {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: grey;
+      box-shadow: 2px 2px black;
+    }
+
+  </style>
+</head>
 <body>
-  <div class="styleAtores">
-    <ul id="atores">
+  <div class="actors">
+    <ul class="ul">
+
     </ul>
   </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
