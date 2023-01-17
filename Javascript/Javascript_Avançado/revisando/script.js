@@ -1,9 +1,21 @@
 const loadButton = document.querySelector("#botaoCarregar")
 
+
+
+
+
+
+
+
+
+
+
+
 /**
  *  adição do método "then" e "catch"
- */
-
+ * ************
+/* PROMISES 
+***************
 function exibirNaTela(dados) {
   console.log('exibindo dados', dados)
 }
@@ -15,6 +27,7 @@ function exibirErro() {
 loadButton.onclick = () => fetch("https://jsonplaceholder.typicode.com/photos", "GET").then(exibirNaTela).catch(exibirErro)
 
 /*nao recebe mais callback como parâmetro*/
+/*
 function fetch() {
   return new Promise((resolve, reject) => {
     const xhttp = new XMLHttpRequest()
@@ -36,6 +49,7 @@ function fetch() {
     xhttp.send()
   })
 }
+*/
 
 
 /********** 

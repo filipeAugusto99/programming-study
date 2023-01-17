@@ -5,35 +5,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 10px;
+    }
+
+    .div {
+      display: flex;
+      flex-direction: column;
+      width: 160px;
+    }
+
+    .div .states {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+
+    .div .citys {
+      display: flex;
+      flex-direction: row;
+    }
+
     .inputError {
-      background-color: red;
+      border: 1px solid red;
+    }
+
+    .error {
+      color: red;
     }
   </style>
-
 </head>
 <body>
+    <form action="" id="form">
+      <div class="div">
+        <div class="states">
+          <label for="text">Estado</label>
+          <select name="states" id="states">
+            <option value="">--Selecione o Estado--</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="sp">São Paulo</option>
+          </select>
+          <span class="error"></span>
+        </div>
 
-  <form id="formCadastro" action="gravarDados.html">
-    <label> Estado
-      <select id="estados" name="estados">
-        <option>-- Selecione --</option>
-        <option value="Rio de Janeiro">Rio de Janeiro</option>
-        <option value="São Paulo">São Paulo</option>
-      </select>
-      <span class="erro"></span>
-    </label>
-    <br>
-    <br>
-    <div id="cidades">
-    
-    </div>
-    <br>
-    <button type="submit">Enviar</button>
-  </form>
+        <div class="citys">
 
-
+        </div>
+        <button>Enviar</button>
+    </form>
   <script src="script.js"></script>
 </body>
 </html>
