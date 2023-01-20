@@ -1,5 +1,7 @@
 const calculos = require('./calculos.js')
 
-const resultado = calculos.soma(10, 20)
+const resultadoSoma = calculos.soma(10, 20)
+const resultadoMultiplicação = calculos.multiplicação(10, 20)
 
-console.log(resultado)
+console.log(resultadoSoma + " " + "resultado da soma")
+console.log(resultadoMultiplicação + " " +"resultado da multiplicação")
