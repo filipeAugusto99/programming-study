@@ -25,12 +25,33 @@ app.use(expressPublic)
 
 
 //rotas
+
 app.get("/", (req, res) => {
-  res.render("index")
+  res.render("index", {
+    title: "Página Inicial",
+    posts: [
+      { 
+        title: "Novidade no mundo da tecnologia", 
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fuga voluptatibus labore at cumque error odio numquam eaque excepturi non! Ipsam debitis facere accusantium, magnam aliquam nisi minima tenetur beatae.", 
+      },
+
+      { 
+        title: "Criando um servidor com node.js", 
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fuga voluptatibus labore at cumque error odio numquam eaque excepturi non! Ipsam debitis facere accusantium, magnam aliquam nisi minima tenetur beatae.", 
+      },
+
+      { 
+        title: "Javascript é a linguagem mais usada no mundo!", 
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fuga voluptatibus labore at cumque error odio numquam eaque excepturi non! Ipsam debitis facere accusantium, magnam aliquam nisi minima tenetur beatae.", 
+      },
+    ]
+  })
 })
 
-app.get("/about", (req, res) => {
-  res.send("about")
+app.get("/posts", (req, res) => {
+  res.render("posts", {
+    title: "Posts"
+  })
 })
 
 
