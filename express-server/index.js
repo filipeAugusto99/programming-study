@@ -6,6 +6,7 @@ const app = express()
 app.set('view engine', 'ejs')
 
 //definindo rotas estáticas e públicas
+
 //1 forma
 /*
 const staticFolder = path.join(__dirname, 'views')
@@ -15,14 +16,25 @@ app.use(expressStatic)
 //2 forma (+resumida)
 app.use(express.static(path.join(__dirname, 'public')))
 
-
 //rotas
 app.get('/', (req, res) => {
   res.render('index') 
 }) 
 
-app.get('/posts', (req, res) => {
-  res.render('posts')
+app.get('/about', (req, res) => {
+  res.render('about')
+})
+
+app.get('/products', (req, res) => {
+  res.render('products')
+})
+
+app.get('/services', (req, res) => {
+  res.render('services')
+})
+
+app.get('/contact', (req, res) => {
+  res.render('contact')
 })
 
 //404 - error (not found)
@@ -31,4 +43,4 @@ app.use ((req, res) => { //middleware
 })
 
 const port = process.env.PORT || 8080
-app.listen(port, () => console.log("Server is listening on port 8080"))
+app.listen(port, () => console.log(`Server is listening on port ${port}`))
