@@ -18,23 +18,55 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //rotas
 app.get('/', (req, res) => {
-  res.render('index') 
+  res.render('index', {
+    title: 'Digital Tech - Home'
+  }) 
 }) 
 
 app.get('/about', (req, res) => {
-  res.render('about')
+  res.render('about', {
+    title: 'Digital Tech - Sobre'
+  })
 })
 
 app.get('/products', (req, res) => {
-  res.render('products')
+  res.render('products', {
+    title: 'Digital Tech - Produtos'
+  })
 })
 
 app.get('/services', (req, res) => {
-  res.render('services')
+  res.render('services', {
+    title: 'Digital Tech - Serviços'
+  })
+})
+
+app.get('/posts', (req, res) => {
+  res.render('posts', {
+    title: 'Digital Tech - Posts',
+    posts: [
+      { 
+        title: 'Novidade no mundo da tecnologia', 
+        text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam eius ad incidunt odit nam quaerat minima quam ducimus assumenda, illo, ipsum saepe. Eligendi ad temporibus officia reprehenderit repudiandae corrupti officiis.', 
+        stars: 1
+      },
+      { 
+        title: 'Criando um servidor com node.js', 
+        text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam eius ad incidunt odit nam quaerat minima quam ducimus assumenda, illo, ipsum saepe. Eligendi ad temporibus officia reprehenderit repudiandae corrupti officiis.', 
+      },
+      { 
+        title: 'Javascript é a linguagem mais utilizada no ', 
+        text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam eius ad incidunt odit nam quaerat minima quam ducimus assumenda, illo, ipsum saepe. Eligendi ad temporibus officia reprehenderit repudiandae corrupti officiis.', 
+        stars: 4
+      },
+    ]
+  })
 })
 
 app.get('/contact', (req, res) => {
-  res.render('contact')
+  res.render('contact', {
+    title: 'Digital Tech - Contato'
+  })
 })
 
 //404 - error (not found)
