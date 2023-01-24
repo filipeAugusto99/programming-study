@@ -1,5 +1,7 @@
 const express = require('express')
 const path = require('path')
+const fs = require('fs')
+
 const app = express()
 
 //definindo o template engine
@@ -15,6 +17,9 @@ app.use(expressStatic)
 */
 //2 forma (+resumida)
 app.use(express.static(path.join(__dirname, 'public')))
+
+//fazendo midleware - habilita o server para receber dados via post (formulário)
+app.use(express.urlencoded({ extended: true}))
 
 //rotas
 app.get('/', (req, res) => {
@@ -67,6 +72,33 @@ app.get('/contact', (req, res) => {
   res.render('contact', {
     title: 'Digital Tech - Contato'
   })
+})
+
+app.get('/cadastro-posts', (req, res) => {
+  const {c} = req.query
+  res.render('cadastro-posts', {
+    title: 'Digital Tech - Cadastrar Post',
+    cadastrado: c,
+  }) 
+}) 
+
+app.post('/salvar-post', (req, res) => {
+  const { titulo, texto } = req.body
+
+  const data = fs.readFileSync('./store/posts.json')
+
+  const posts = JSON.parse(data)
+
+  posts.push({
+    titulo,
+    texto,
+  })
+
+  const postsString = JSON.stringify(posts)
+
+  fs.writeFileSync('./store/posts.json', postsString)
+
+  res.redirect('/cadastro-posts?c=1')
 })
 
 //404 - error (not found)
