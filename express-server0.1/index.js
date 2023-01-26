@@ -1,78 +1,31 @@
-//importando bibliotecas
 const express = require('express')
 const path = require('path')
-const fs = require('fs')
-const { stringify } = require('querystring')
 
 const app = express()
+
+//definindo template ejs
 app.set('view engine', 'ejs')
 
-//definindo arquivos estáticos e públicos
-
+//definindo rotas estáticas e públicas
 //app.use(express.static(path.join(__dirname, 'views')))
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-//habilita o server para receber dados via post
-app.use(express.urlencoded({ extended: true }))
-
-//definindo rotas
-app.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Digital Tech - Home'
+//definindo as rotas
+app.get("/", (req, res) => {
+  res.render("index", {
+    title: "Digital Tech - Home",
   })
 })
 
-app.get('/posts', (req, res) => {
-  res.render('posts', {
-    title: 'Digital Tech - Posts',
-    posts: [
-      {
-        title: "Novidade em um mundo de tecnologia",
-        text: "Loremaklsmcaksmcasklcmalvdvsdvlmsvlm",
-        stars: 2,
-      },
-      {
-        title: "Novidade em um mundo de tecnologia",
-        text: "Loremaklsmcaksmcasklcmalvdvsdvlmsvlm",
-        stars: 5,
-      },
-      {
-        title: "Novidade em um mundo de tecnologia",
-        text: "Loremaklsmcaksmcasklcmalvdvsdvlmsvlm",
-        stars: 0,
-      },
-    ]
-  })
-})
-
-app.get('/cadastro-posts', (req, res) => {
-  const {c} = req.query
-  res.render('cadastro', {
-    title: 'Digital Tech - Cadastro Post',
-    cadastrado: c,
-  })
-})
-
-app.post('/salvar-post', (req, res) => {
-  const { titulo, texto } = req.body
-  const data = fs.readFileSync('./store/posts.json')
-  const posts = JSON.parse(data)
-  posts.push({
-    titulo,
-    texto,
-  })
-  const postsString = JSON.stringify(posts)
-  fs.writeFileSync('./store/posts.json', postsString)
-  res.redirect('/cadastro-posts?c=1')
+app.get("/posts", (req, res) => {
+  res.send("Posts")
 })
 
 app.use((req, res) => {
-  res.send("Página não encontrada!")
+  res.send("pagina não encontrada")
 })
 
-//definindo portas
+//definindo a porta
 const port = process.env.PORT || 8080
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`)
-})
+app.listen(port, () => console.log( `Server is listening on port ${port}`))
