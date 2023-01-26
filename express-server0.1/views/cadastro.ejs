@@ -7,9 +7,6 @@
 <%- include('partials/header.ejs') %> 
   <main>
     <h1>Cadastro de Posts</h1>
-    <% if (cadastrado) { %>
-      Cadastro realizado com sucesso
-    <% } %>
     <form action="/salvar-post" method="post">
       <div>
         <label>Título</label>
