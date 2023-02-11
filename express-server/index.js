@@ -19,7 +19,7 @@ app.use(expressStatic)
 app.use(express.static(path.join(__dirname, 'public')))
 
 //fazendo midleware - habilita o server para receber dados via post (formulário)
-app.use(express.urlencoded({ extended: true}))
+app.use(express.urlencoded({extended: true}))
 
 //rotas
 app.get('/', (req, res) => {
@@ -75,27 +75,25 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/cadastro-posts', (req, res) => {
-  const {c} = req.query
+  const { c } = req.query
   res.render('cadastro-posts', {
-    title: 'Digital Tech - Cadastrar Post',
+    title: 'Digital Tech - Cadastro de Posts',
     cadastrado: c,
-  }) 
-}) 
+  })
+})
 
 app.post('/salvar-post', (req, res) => {
   const { titulo, texto } = req.body
-
+  
   const data = fs.readFileSync('./store/posts.json')
 
   const posts = JSON.parse(data)
-
   posts.push({
     titulo,
     texto,
   })
 
   const postsString = JSON.stringify(posts)
-
   fs.writeFileSync('./store/posts.json', postsString)
 
   res.redirect('/cadastro-posts?c=1')

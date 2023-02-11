@@ -7,7 +7,8 @@ button.onclick = function nameAndAge() {
   let age = parseInt(inputAge)
   
   const biggerAge = 18;
-
+  
+  //isNaN( is Not a Number === não é um número )
   if (age === "" || name === "" || name === null || age === null || isNaN(age)) {
     alert('preencha os campos corretamente')
     return
