@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head.ejs') %>
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+  <article>
+    <h1>Cadastro de Posts</h1>
+    <% if (cadastrado) { %>
+      Cadastro realizado com sucesso!
+    <% } %>
+    <form action="/salvar-post" method="post">
+      <div>
+        <label>Título</label>
+        <input type="text" name="titulo">
+      </div>
+      <div>
+        <label>Texto</label>
+        <textarea name="texto"></textarea>
+      </div>
+      <div>
+        <button type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </article>
+  <%- include('partials/footer.ejs') %>
+  <%- include('partials/foot.ejs') %>
+</body>
+</html>
